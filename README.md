@@ -7,6 +7,7 @@ Each players starts with 8 pieces configured at the rows closest to themselves. 
 2. BLUE = Rook like moves
 3. GREEN = Bishop like moves
 4. BEIGE = Knight like moves
+
 The scatter of the colors at the beginning of the game is (semi)randomized in order to meet some constrains which ensure that one player does not get an immediately advantageous position in the beginning. 
 
 # Winning 

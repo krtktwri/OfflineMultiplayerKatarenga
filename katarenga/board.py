@@ -154,6 +154,9 @@ class Board:
                 elif (self.board[r][c].color != self.board[row][col].color):
                     moves[(r, c)] = []
                     break
+                elif (self.color[r, c] == BLUE
+                    moves[(r, c)] = []
+                    break
                 
                 
                 else:
@@ -180,6 +183,9 @@ class Board:
                 elif self.board[r][c].color != self.board[row][col].color:
                     moves[(r, c)] = []
                     capture = True
+                    break
+                elif self.color[r][c] == GREEN
+                    moves[(r, c)] = []
                     break
                 else:
                     break

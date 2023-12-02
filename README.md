@@ -1,5 +1,5 @@
 # Katarenga
-This is a pygame emulation of an extremely enjoyable board game named Katarenga (which my friend Piet introduced me to). Katarenga is a close derivative of standard chess played on an 8x8 grid. Running main.py file creates an interactive GUI powered by PyGame for two players to play Katarenga offline. 
+My friend Piet introduced me to a wonderful board game for which not many public digital version exists. I'm hoping to deploy the game for online multiplayer matches so we can play together more often. In the meanwhile, this repository has the local version of the game. Katarenga is a close derivative of standard chess played on an 8x8 grid. Running main.py file creates an interactive GUI powered by PyGame for two players to play Katarenga offline. 
 
 # Rules
 Each players starts with 8 pieces configured at the rows closest to themselves. Unlike in chess, each piece does not have a predefined set of valid moves. Instead, what ways a piece can move depends on the square that it is currently standing on. In this implementation of the game, the color scheme followed is listed below (though one does not need to refer to since selecting a piece displays its valid moves)

@@ -41,7 +41,6 @@ def main():
                     game.select(row, col, attempt_advance)  
                       
                 game.select(row, col)
-
         
         game.update()
             

@@ -133,7 +133,6 @@ class Board:
                         moves[(r, c)] = []
                     elif self.board[r][c].color != self.board[row][col].color:
                         moves[(r, c)] = []
-                        capture = True
         return moves
     
     def rook_moves(self, row, col):
@@ -145,17 +144,19 @@ class Board:
         for dx, dy in directions:
             r, c = row + dx, col + dy
             
-            
             while 0 <= r < ROWS  and 0 <= c < COLS:
                 
                 if self.board[r][c] == 0:
                     moves[(r, c)] = []
-                
+
+                    # Stopping the rook from moving further if it encounters a square of Rook Type tile
+                    if np.array_equal(self.colors[r][c], BLUE):
+                        break
+                    
                 elif (self.board[r][c].color != self.board[row][col].color):
                     moves[(r, c)] = []
-                    break
-                
-                
+                    break               
+                    
                 else:
                     break
                 r += dx
@@ -169,7 +170,6 @@ class Board:
     def bishop_moves(self, row, col):
         moves = {}
         
-
         directions = [(-1, -1), (-1, 1), (1, -1), (1, 1)]  # Diagonal directions
 
         for dx, dy in directions:
@@ -177,9 +177,10 @@ class Board:
             while 0 <= r < ROWS and 0 <= c < COLS:
                 if self.board[r][c] == 0:
                     moves[(r, c)] = []
+                    if np.array_equal(self.colors[r][c], GREEN):
+                        break
                 elif self.board[r][c].color != self.board[row][col].color:
                     moves[(r, c)] = []
-                    capture = True
                     break
                 else:
                     break
@@ -194,7 +195,7 @@ class Board:
         knight_moves = [
             (-2, -1), (-2, 1), (-1, -2), (-1, 2),
             (1, -2), (1, 2), (2, -1), (2, 1)
-        ]  # Possible knight moves
+        ]  # Possible knight move directions
 
         for dx, dy in knight_moves:
             r, c = row + dx, col + dy

@@ -14,5 +14,5 @@ The scatter of the colors at the beginning of the game is (semi)randomized in or
 In Katarenga, there is no equivalent of a 'check' or a 'checkmate'. Instead, one wins the game either by capturing all the pieces of the opponent or by advancing two of their own pieces beyond the last row. In this implementation of the game, the way to attempt a piece advancement is to select the piece and scroll-down. If the piece is at the final row, the piece gets advanced and this counts as one move. 
 
 # Known Bugs
-As per the rules of Katarenga, one is only allowed to move as far as the next square of the same color. The valid move trajectories however seem to continue beyond this constraint. This is a relatively silly bug hidden somewhere in the code which I haven't gotten around to fixing because I'm currently working on extending the code such that one can play the game online with another player.
+[FIXED on 2 Dec 2023] As per the rules of Katarenga, one is only allowed to move as far as the next square of the same color. The valid move trajectories however seem to continue beyond this constraint. This is a relatively silly bug hidden somewhere in the code which I haven't gotten around to fixing because I'm currently working on extending the code such that one can play the game online with another player.
    
